@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+
+    while(t--)
+    {
+        int n,x;
+        cin>>n>>x;
+        int max=0;
+        // int a[n],b[n];
+        // vector<pair<int,int>>v[n];
+        for(int i=0;i<n;i++)
+        {
+            int ele1;
+            int ele2;
+            cin>>ele1;
+            cin>>ele2;
+            // v[i].push_back(make_pair(ele1,ele2));
+            if(ele1<=x)
+            {
+                if(ele2>max)
+                {
+                    max=ele2;
+                }
+            }
+            
+
+        
+        }
+        cout<<max<<endl;
+
+
+
+    }
+    return 0;
+}
