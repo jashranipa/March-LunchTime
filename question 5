@@ -1,0 +1,55 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+
+    while(t--)
+    {
+        long long int x,r,m;
+        cin>>x>>r>>m;
+        long long int rem = (r*60);
+        long long int time=0;
+        
+        if(rem<=x)
+        {
+            time+=rem;
+            
+        }
+        if(rem>x)
+        {
+            while(rem>x)
+            {
+            
+                
+                time+=x;
+                rem-=x;
+                if(rem>x)
+                {
+                    time+=x;
+                }
+                else
+                {
+                    break;
+                }
+
+            }
+            
+            
+            time+=(2*rem);
+            
+        }
+        // cout<<time<<endl;
+        if(time<=(m*60))
+        {
+            cout<<"YES"<<endl;
+        }
+        else
+        {
+            cout<<"NO"<<endl;
+        }
+    }
+    return 0;
+}
