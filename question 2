@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+
+    while(t--)
+    {
+        int n;
+        int flag=0;
+        int sum=0;
+        cin>>n;
+        for(int i=0;i<n;i++)
+        {
+            int ele;
+            cin>>ele;
+            sum+=ele;
+            if(ele==2)
+            {
+                flag=1;
+            }
+
+        }
+        if(sum%2==0)
+        {
+            cout<<0<<endl;
+            continue;
+        }
+        else
+        {
+            if(flag==1)
+            {
+                cout<<1<<endl;
+                continue;
+            }
+            else
+            {
+                cout<<-1<<endl;
+                continue;
+            }
+        }
+    }
+    return 0;
+}
